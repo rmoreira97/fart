@@ -166,6 +166,9 @@ header{
     border-radius: 40px;
     color: #ffffff;
     font-weight: 500;
+    display: flex; 
+    align-items: center;
+    max-width: 100px;
 }
 
 .btn-tok:hover{
@@ -314,11 +317,32 @@ header{
     flex: 1 1 21rem;
 }
 
+
+.delivery-text{
+    background-color: rgba(0, 0, 0, 0.5); /* The '0.5' here is the alpha value */
+
+    padding: 20px;
+    border-radius: 10%;
+    max-width: 100%;
+}
+
+.app-text{
+    background-color: rgba(0, 0, 0, 0.5); /* The '0.5' here is the alpha value */
+
+    background-blend-mode: lighten;
+    padding: 20px;
+    border-radius: 10%;
+    max-width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .delivery-text,
 .app-text{
     flex: 1 1 21rem;
     margin-top: -50px;
-    color: var(--thrid-color);
+    color: var(--thrid-color)
 }
 
 .delivery-text h2,
@@ -349,13 +373,15 @@ header{
 .about-text{
     flex: 1 1 17rem;
     color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* The '0.5' here is the alpha value */
+    padding: 20px;
+    border-radius: 10%;
+
 }
 
 .about-text h2{
     font-size: 1.2rem;
     color: green;
-    border: 2px #fff;
-    border-radius: 2px;
 }
 
 .about-text p{
@@ -500,22 +526,13 @@ header{
 @media (max-width:768px ){
     header{
         padding: 11px 4%;
+        display:none;
     }
   #menu-icon{
     display: initial;
   }
   header .navbar{
-    position: absolute;
-    top: -500px;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    box-shadow: 0 4px 4px rgb(14 55 54 / 14%);
-    border-top: 2px solid var(--main-color);
-    transition: 0.2s;
-    text-align: left;
+    display: none;
   }
 
   .navbar.active{
