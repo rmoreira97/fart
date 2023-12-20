@@ -11,6 +11,42 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+
+@keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+  /* Apply to elements that should come in from the left */
+.slide-in-left {
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+  
+  /* Apply to elements that should come in from the right */
+  .slide-in-right {
+    animation: slideInFromRight 1s ease-out forwards;
+  }
+
+
 :root{
     --main-color:#ffffff;
     --second-color:#1e3932;
@@ -19,6 +55,52 @@
     --grey-color:#252525;
     --pink-color:#000000;
 }
+   /* Add this style to ensure tsparticles div is full screen and behind all content */
+   #tsparticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+}
+body, html {
+    margin: 0;
+    height: auto;
+    overflow-x: hidden;
+}
+header, .navbar, section {
+    position: relative;
+    z-index: 1;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.smoke {
+    filter: url('#filter');
+  }
+
+
+
+  #fart-text {
+    filter: url('#smoke-filter');
+    background: linear-gradient(#464444, #008000, #ddd, #888);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 7rem;
+    /* Rest of your styles... */
+  }
+  
+  /* Other elements not affected by the smoke effect */
+  h2, .btn {
+    filter: none;
+  }
 
 section{
     padding: 50px 10%;

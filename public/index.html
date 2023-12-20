@@ -6,30 +6,16 @@
     <title>$FART</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"> 
     <link rel="shortcut icon" href="/fart.png" type="image/x-icon">
     <style>
-        /* Add this style to ensure tsparticles div is full screen and behind all content */
-        #tsparticles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        body, html {
-            margin: 0;
-            height: 100%;
-            overflow-x: hidden;
-        }
-        header, .navbar, section {
-            position: relative;
-            z-index: 1;
-        }
+    
+    
     </style>
 </head>
 <body>
 <!-- Navbar -->
+<div class="smoke"></div>
 <div id="tsparticles"></div>
     <header>
         <a href="index.html#" class="logo"><img src="img/fart.png" alt=""></a>
@@ -45,17 +31,24 @@
 
     </header>
 
-    <!-- Home -->
-    <section class="home" id="home">
-        <div class="home-text">
-            <span>Welcome To</span>
-            <h1>$FART</h1>
-            <h2>Financially Agressive, Relentlessly Trading</h2>
-            <a href="https://t.me/bonkainu" class="btn">Join Now</a>
+    <section class="home" id="home" >
+        <div data-aos="fade-right" data-aos-duration="2000" class="home-text">
+            <div class="smoke">
+                <h1 data-aos="fade-right" id="fart-text">$FART</h1>
+            </div>
+            <h2>Financially Aggressive, Relentlessly Trading</h2>
+            <a href="https://t.me/fartmoon" class="btn">Join Now</a>
         </div>
-        <div class="home-img">
-            <img src="/fart.png" alt="BONKA">
+        <div class="home-img" data-aos="fade-left" data-aos-duration="3000">
+            <img src="/fart.png" alt="FART">
         </div>
+        <!-- SVG Filter for Smoke Effect -->
+        <svg style="position:absolute; width:20; height:0;">
+            <filter id="smoke-filter">
+                <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.3" numOctaves="10" />
+                <feDisplacementMap in="SourceGraphic" scale="30" />
+            </filter>
+        </svg>
     </section>
 
     <!-- delivery -->
@@ -66,7 +59,7 @@
             <div class="delivery-img">
                 <img src="img/cdek.png" alt="">
             </div>
-            <div class="delivery-text">
+            <div class="delivery-text" data-aos="fade-right"data-aos-duration="2000">
               <h2>FART is a trading school of thought for the modern age.</h2>
               <p>Introducing FART, the revolutionary crypto token that embodies the essence of a Fundamentally Astute Risk-Taking Trader. In a world where the crypto market is often shrouded in uncertainty, FART stands out as a beacon of confidence, blending the art of trading with a fearless spirit.</p>
               <BR>
@@ -78,8 +71,8 @@
         </div>
     </section>
 
-    <section class="app" id="Tokenomic">
-        <div class="headingtok">
+    <section class="app" id="Tokenomic" data-aos="fade-left"data-aos-duration="2000">
+        <div class="headingtok ">
             <h1>FARTENOMICS</h1>
         </div>
         <div class="container">
@@ -104,12 +97,12 @@
 <!-- roadmaps -->
 
     <!-- about -->
-    <section class="about" id="how">
+    <section class="about" id="how" data-aos="fade-left">
        
         <div class="about-img">
             <img src="img/banner&#32;twitter.png" alt="">
         </div>
-        <div class="about-text">
+        <div class="about-text" data-aos="fade-right" data-aos-duration="2000">
             <h2>How To Buy</h2> <br>
             <p><strong>1. Set Up Your Wallet</strong></p>
             <p>Download Phantom or your wallet of choice from the app store or google play store for free. Desktop users, download the google chrome extension by going to Phantom.app</p>
@@ -122,7 +115,7 @@
             <!-- <a href="" class="btn">Learn more</a> -->
         </div>
     </section>
-    <section class="chart">
+    <section class="chart" data-aos="fade-left" data-aos-duration="2000">
         <div class="heading">
             <h1>LIVE CHART</h1><br>
         </div>
@@ -133,7 +126,7 @@
     </section>
 
     <!-- contact -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" data-aos="fade-up">
         <p><strong>JOIN US</strong></p> <br>
         <div class="social">
             <a href="https://twitter.com/napalmfart"><i class='bx bxl-twitter' ></i></a>
@@ -147,22 +140,134 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.18.3/dist/tsparticles.min.js"></script>
     <div id="tsparticles"></div>
     
-    <style>
-      body {
-      margin: 0;
-    }
-    
-    #tsparticles {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-    }
-    </style>
+  
     
     <script>
-      tsParticles.load("tsparticles", {"background":{"color":{"value":"#11101a"}},"fpsLimit":120,"fullScreen":false,"interactivity":{"events":{"onClick":{"enable":true,"mode":"push"},"resize":true},"modes":{"push":{"quantity":4},"repulse":{"distance":200,"duration":0.4}}},"particles":{"color":{"value":"#7ab6f2","radius":"1"},"links":{"color":"#7ab6f2","distance":150,"enable":true,"opacity":1,"width":1},"collisions":{"enable":true},"move":{"directions":"none","enable":true,"outModes":{"default":"bounce"},"random":false,"speed":1,"straight":false},"number":{"density":{"enable":true,"area":800},"value":97},"opacity":{"value":0.5},"shape":{"type":"circle"},"size":{"value":{"min":1,"max":1}}},"detectRetina":true});
-    </script>
+     tsParticles.load("tsparticles", {
+  "background": {
+    "color": {
+      "value": "#000000"
+    }
+  },
+  "fpsLimit": 120,
+  "fullScreen": true,
+  "interactivity": {
+    "events": {
+      "onClick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "push": {
+        "quantity": 4
+      },
+      "repulse": {
+        "distance": 100,
+        "duration": 4
+      }
+    }
+  },
+  "particles": {
+    "color": {
+      "value": "#008000",
+      "radius": "1"
+    },
+    "links": {
+      "color": "#008000",
+      "distance": 150,
+      "enable": true,
+      "opacity": 1,
+      "width": 1
+    },
+    "collisions": {
+      "enable": true
+    },
+    "move": {
+      "directions": "none",
+      "enable": true,
+      "outModes": {
+        "default": "bounce"
+      },
+      "random": false,
+      "speed": 1.5,
+      "straight": false
+    },
+    "number": {
+      "density": {
+        "enable": true,
+        "area": 800
+      },
+      "value": 97
+    },
+    "opacity": {
+      "value": 0.5
+    },
+    "shape": {
+      "type": "circle"
+    },
+    "size": {
+      "value": {
+        "min": 2,
+        "max": 2
+      }
+    }
+  },
+  "detectRetina": true
+});
+          const filter = document.querySelector("#turbulence");
+  let frames = 1;
+  let rad = Math.PI / 180;
+  let bfx, bfy;
+
+  function freqAnimation() {
+    frames += 0.2;
+
+    bfx = 0.03;
+    bfy = 0.03;
+
+    bfx += 0.005 * Math.cos(frames * rad);
+    bfy += 0.005 * Math.sin(frames * rad);
+
+    bf = `${String(bfx)} ${String(bfy)}`;
+    filter.setAttributeNS(null, "baseFrequency", bf);
+
+    requestAnimationFrame(freqAnimation);
+  }
+
+  requestAnimationFrame(freqAnimation);
+
+  const root = document.documentElement;
+  const state = {
+    bodyBg: "#111",
+    textColor: "#f5f5f5",
+    textSize: 10,
+  };
+
+  function handleCssProp(value) {
+    state[this.property] = value;
+    root.style.setProperty(`--${this.property}`, String(value));
+  }
     
+    </script>
+    <!-- AOS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: false, // Animation should happen every time you scroll
+            mirror: true, // Animations should occur when scrolling up
+        });
+    
+        // Optional: Debounce the scroll event handler to improve performance
+        let timeout;
+        window.addEventListener('scroll', () => {
+            clearTimeout(timeout);
+            timeout = setTimeout(AOS.refresh, 50);
+        });
+    </script>
+
     <script src="main.js"></script>
     <!-- target styles -->
 
